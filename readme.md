@@ -31,23 +31,33 @@ services:
 
 Tenemos que entrar en el contenedor:
 
+```yaml
 docker exec -u root -it odoomodulo-odoo-1 /bin/bash
+````
 
 Si no sabemos el nombre de nuestro contenedor podemos usar este comando:
 
+```yaml
 docker ps
+````
 
 Entramos en la carpeta **extra-addons**
 
+```yaml
 cd /mnt/extra-addons/
+````
 
 Creamos el modulo
 
+```yaml
 odoo scaffold openacademy
+````
 
 Para poder modificar el modulo tendremos que cambiar los permisos
 
+```yaml
 chown -R 777 openacademy
+````
 
 Ahora si vemos el arbol de nuestro proyecto dentro de extra-addons tendremos una carpeta llamada **openacademy**, este es nuestro módulo.
 
